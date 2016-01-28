@@ -3,12 +3,12 @@
 
 <?PHP
     $mode = isset($_REQUEST['test']) ? true:false;
-    $metadataSrc = "http://libphonenumber.googlecode.com/svn/trunk/javascript/i18n/phonenumbers/metadata.js";
+    $metadataSrc = "javascript/metadata.js";
     $fileName = "PhoneNumberMetaData";
     
     if ($mode)
     {
-        $metadataSrc = "http://libphonenumber.googlecode.com/svn/trunk/javascript/i18n/phonenumbers/metadatafortesting.js";
+        $metadataSrc = "javascript/metadatafortesting.js";
         $fileName = "PhoneNumberMetaDataForTesting";
     }
 ?>
@@ -24,11 +24,11 @@
         goog.require('goog.proto2.ObjectSerializer');
         goog.require('goog.string.StringBuffer');
     </script>
-    <script src="http://libphonenumber.googlecode.com/svn/trunk/javascript/i18n/phonenumbers/phonemetadata.pb.js"></script>
-    <script src="http://libphonenumber.googlecode.com/svn/trunk/javascript/i18n/phonenumbers/phonenumber.pb.js"></script>
+    <script src="javascript/phonemetadata.pb.js"></script>
+    <script src="javascript/phonenumber.pb.js"></script>
     <script src=<?PHP echo '"'.$metadataSrc.'"'; ?>></script>
-    <script src="http://libphonenumber.googlecode.com/svn/trunk/javascript/i18n/phonenumbers/phonenumberutil.js"></script>
-    <script src="http://libphonenumber.googlecode.com/svn/trunk/javascript/i18n/phonenumbers/asyoutypeformatter.js"></script>
+    <script src="javascript/phonenumberutil.js"></script>
+    <script src="javascript/asyoutypeformatter.js"></script>
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     <script>
         goog.require('i18n.phonenumbers.metadata');
