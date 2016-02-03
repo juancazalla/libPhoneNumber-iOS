@@ -10904,9 +10904,9 @@
 {
     self = [super init];
     if (self) {
-        self.generalDesc = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"[1-46-9]\\d{7,10}|5\\d{8,9}" withPossibleNumberPattern:@"\\d{8,11}" withExample:nil];
+        self.generalDesc = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"[1-46-9]\\d{7,10}|5\\d{8,10}" withPossibleNumberPattern:@"\\d{8,11}" withExample:nil];
         self.fixedLine = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"1[1-9][2-5]\\d{7}|(?:[4689][1-9]|2[12478]|3[1-578]|5[1-5]|7[13-579])[2-5]\\d{7}" withPossibleNumberPattern:@"\\d{8,11}" withExample:@"1123456789"];
-        self.mobile = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"(?:[189][1-9]|2[12478]|3[1-578]|7[13-579])(?:7|9\\d)\\d{7}|(?:4[1-9]|5[1-5]|6[1-9])[6-9]\\d{7}" withPossibleNumberPattern:@"\\d{10,11}" withExample:@"11961234567"];
+        self.mobile = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"(?:[189][1-9]|2[12478]|3[1-578]|7[13-579])(?:7|9\\d)\\d{7}|(?:4[1-9]|5[1-5]|6[1-9])9?[6-9]\\d{7}" withPossibleNumberPattern:@"\\d{10,11}" withExample:@"11961234567"];
         self.tollFree = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"800\\d{6,7}" withPossibleNumberPattern:@"\\d{8,11}" withExample:@"800123456"];
         self.premiumRate = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"[359]00\\d{6,7}" withPossibleNumberPattern:@"\\d{8,11}" withExample:@"300123456"];
         self.sharedCost = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"[34]00\\d{5}" withPossibleNumberPattern:@"\\d{8}" withExample:@"40041234"];
